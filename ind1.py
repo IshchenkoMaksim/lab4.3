@@ -36,7 +36,7 @@ class Triangle:
         if b > 0:
             self.__b = b
         else:
-            raise ValueError
+            raise ValueError()
 
     @property
     def side_c(self):
@@ -47,7 +47,7 @@ class Triangle:
         if c > 0:
             self.__c = c
         else:
-            raise ValueError
+            raise ValueError()
 
     def perimeter(self):
         return self.__a + self.__b + self.__c
