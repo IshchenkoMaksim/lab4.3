@@ -36,11 +36,7 @@ class Ellipse(Function):
         if self.__a == 0:
             raise ValueError()
 
-        y = 1 + (self.__x ** 2 / self.__a ** 2) * self.__b ** 2
-        if y >= 0:
-            self.__y = sqrt(y)
-        else:
-            raise ArithmeticError()
+        self.__y = sqrt(1 + (self.__x ** 2 / self.__a ** 2) * self.__b ** 2)
 
     def display(self):
         return self.__y
@@ -62,7 +58,7 @@ class Hyperbola(Function):
         if y >= 0:
             self.__y = sqrt(y)
         else:
-            raise ArithmeticError()
+            raise ArithmeticError("При данных значениях функция не имеет решения")
 
     def display(self):
         return self.__y
